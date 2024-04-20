@@ -6,9 +6,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Ingreso del tamaño del array y su creacion
-		System.out.print("Ingrese un valor en el rango [3,10]: ");
 		Scanner scan = new Scanner(System.in);
-		int size = scan.nextInt();
+		int size;
+		do {
+			System.out.print("Ingrese un valor en el rango [3,10]: ");
+			size = scan.nextInt();
+		} while (size < 3 || size > 10);
+		
 		int [] array = new int [size];
 		
 		// Entrada de datos del array
